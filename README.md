@@ -28,4 +28,4 @@ In the time available, create the closest possible clone of [this website](http:
 
 At the end of the allotted time, `commit` and then push your work to your forked GitHub repo. Then, submit a pull request from your fork to the branch named after your GitHub username. Make sure you pull request into your branch name, **not** into the `main` branch. If you need help submitting a pull request, just post in the Slack help desk channel.
 
-https://user-images.githubusercontent.com/47452487/117694574-4caf6400-b18d-11eb-996a-a0892208d4cb.mov
+
