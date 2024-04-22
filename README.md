@@ -20,7 +20,6 @@ Be sure your functions handle common edge cases such as arrays and strings of le
 Create the closest possible clone of [this website](https://www.geico.com/). 
 
 ### Submitting your work
-
-At the end of the allotted time, `commit` and then push your work to your forked GitHub repo. Then, submit a pull request from your fork to the branch named after your GitHub username. Make sure you pull request into your branch name, **not** into the `main` branch. If you need help submitting a pull request, just post in the Slack help desk channel.
+`commit` and then push your work to your forked GitHub repo. Once done message Bashiri and schedule a follow up call [here](https://calendly.com/100kcoder/coaching-call) for 3 days after the day you completed the exam.
 
 
