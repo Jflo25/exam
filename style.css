@@ -1,11 +1,679 @@
-/**
- * These two CSS rules have been provided for you, but feel free to change them!
- */
- 
+/* General Styles */
 body {
-  color: #000080;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #1c1c1e;
 }
 
-h1 {
+/*----Navbar--- */
+.navbar {
+  background-color: #2b2b2f;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.25rem 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  padding: 0 1rem; /* Adjust spacing */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #aaa;
+}
+
+/* Icons Style */
+.fa-user,
+.fa-bars {
+  margin-right: 5px;
+}
+
+/*------------------------------------------------------------------- */
+/*------------------------------------------------------------------- */
+.savings-section {
+  background-color: #1c1c1e;
   text-align: center;
+  padding: 40px 0;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+  margin: auto;
+}
+
+.savings-content-container {
+  width: 70%;
+  margin: auto 10%;
+  text-align: start;
+}
+/* Title Styling */
+.savings-title {
+  font-size: 40px;
+}
+
+/* Subtext Styling */
+.savings-subtext {
+  margin-bottom: 20px;
+  width: 50%;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Container for the ZIP code and insurance options */
+.insurance-options-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+/* ZIP Code Input Styling */
+.zip-code-container {
+  margin-bottom: 30px;
+}
+
+.zip-code-container input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.zip-code-container button {
+  padding: 10px 20px;
+  background-color: inherit;
+  color: #0f6ef7;
+  border: 2px solid #0f6ef7;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.zip-code-container button:hover {
+  background-color: #0f6ef7;
+  color: #ffffff;
+}
+
+.insurance-options-container {
+  width: 100%;
+  height: 350px;
+}
+/* Insurance Options Grid Styling */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 1rem;
+}
+
+/* Individual Insurance Option Card Styling */
+.option-card {
+  background: #1a1a1a;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  color: #ffffff;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+/* Icon Container Styling */
+.icon-container {
+  background-color: #2b2b2f;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+/* Icon Styling */
+.option-card i {
+  font-size: 30px;
+  color: #0f6ef7;
+  margin: 0 100px 0 0;
+}
+
+/* bottom half of card section */
+.text-container {
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+
+/* Text Styling */
+.option-card p {
+  font-size: 16px;
+  font-weight: 100;
+  margin: 0;
+}
+
+/* Style for the card checkbox */
+.card-checkbox {
+  position: relative;
+  top: -30%;
+  left: 70%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.card-checkbox + label {
+  position: relative;
+  display: block;
+  padding: 10px;
+}
+
+/* Gecko Image Styling */
+.gecko-image {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gecko-image img {
+  display: block;
+  max-width: 90%;
+  height: auto;
+
+  border-radius: 50%;
+  padding: 5%;
+}
+
+/* Additional Actions: View More and Start Quote Button Styling */
+.additional-actions-container {
+  padding: 20px;
+  background-color: #1c1c1e;
+  width: 35%;
+  margin: auto 10%;
+}
+
+.view-more-text {
+  color: #fff;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.start-quote-button {
+  background-color: #0f6ef7;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-quote-button:hover {
+  background-color: #007bff;
+}
+
+.additional-links {
+  margin-top: 1rem;
+  width: 100%;
+  white-space: nowrap;
+  margin-left: -5rem;
+}
+
+.additional-link {
+  color: #0f6ef7;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.additional-link:hover {
+  text-decoration: underline;
+}
+
+.line {
+  content: "";
+  margin: auto;
+  bottom: -1px; /* Align with the bottom of the section */
+  width: 65%;
+  border-bottom: 2px solid #fff;
+}
+
+/* claims section */
+.claims-section {
+  display: flex;
+  align-items: center;
+  background-color: #1c1c1e;
+  color: #fff;
+  padding: 40px;
+  width: 70%;
+  height: 500px;
+  margin: auto;
+}
+
+.claims-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.claims-image-container {
+  width: 45%;
+  overflow: hidden;
+}
+
+.claims-image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.claims-content {
+  padding: 20px;
+}
+
+.claims-heading {
+  margin-top: -5rem;
+  font-size: 24px;
+}
+
+.action-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.action-item a {
+  border: 2px solid #7cabff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  text-decoration: none;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action-item a i {
+  margin-left: auto;
+}
+
+/* Everdayneeds section */
+.everyday-needs-section {
+  width: 70%;
+  margin: auto;
+  padding: 40px 0;
+  background-color: #1c1c1e;
+  color: #fff;
+}
+
+.content-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content-header h2 {
+  font-size: 24px;
+}
+
+.content-header p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.insurance-card {
+  width: 48%;
+  margin: 30px 0;
+  height: 500px;
+}
+
+.insurance-card img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-info {
+  background-color: #2b2b2f;
+  padding: 10px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card-info h3 {
+  margin: 5px 0;
+}
+
+.card-info p {
+  text-align: center;
+}
+
+.info-button {
+  background-color: transparent;
+  color: #7cabff;
+  border: 2px solid #7cabff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.info-button:hover {
+  background-color: #7cabff;
+  color: #fff;
+}
+
+/* switch section  */
+.switch-section {
+  background-color: #1c1c1e;
+  color: #fff;
+  width: 70%;
+  margin: auto;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.switch-title {
+  text-align: left;
+  font-size: 32px;
+}
+
+.statistics-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.statistic {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.divider {
+  height: 100px;
+  width: 2px;
+  background-color: #fff;
+  margin: 0 20px;
+}
+
+.statistic h3 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.statistic p {
+  font-size: 18px;
+}
+
+/* rating section */
+.rating-section {
+  color: #fff;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  height: 500px;
+}
+
+.text-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+}
+
+.text-container h1 {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text-container h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.app-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 20rem 3rem 0;
+}
+
+.app-features li {
+  font-size: 15px;
+  padding: 10px 0;
+  text-align: left;
+}
+
+.download-btn {
+  background-color: #99d4f2;
+  color: #1c1c1e;
+  border-radius: 25px;
+  padding: 15px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #82bfea;
+}
+
+.explore-heading {
+  margin-top: -5rem;
+  font-size: 36px;
+}
+
+.explore-subtext {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* disclaimer-container */
+.disclaimer-container {
+  width: 100%;
+  background-color: #1c1c1e;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin-bottom: -1.25rem;
+}
+
+.disclaimer-text {
+  width: 70%;
+  margin: auto;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #2b2b2f;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.blue-bar-top,
+.blue-bar-bottom {
+  color: #ffffff;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  width: 110%;
+  margin-left: -1.1rem;
+}
+
+.blue-bar-top {
+  background-color: #1a4d97;
+}
+
+.blue-bar-bottom {
+  background-color: #002f65;
+}
+
+.white-line {
+  height: 2px;
+  background-color: #ffffff;
+  width: 120%;
+  margin-left: -1rem;
+}
+
+.fa-lock {
+  margin-right: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  margin-left: 10px;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/*---Footer---*/
+footer {
+  background: #2b2b2f;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer-top h1 {
+  font-size: 2em;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.insurance-categories {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.insurance-categories > div {
+  flex-basis: 20%;
+  margin-bottom: 15px;
+}
+
+.insurance-categories h3 {
+  font-size: 1.2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.insurance-categories ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.insurance-categories ul li {
+  margin-bottom: 5px;
+}
+
+.insurance-categories ul li a {
+  text-decoration: none;
+  color: #80c2ff;
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .insurance-categories > div {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .insurance-categories > div {
+    flex-basis: 100%; /* Stacks the categories on very small screens */
+  }
+}
+/* Social Media Icons */
+.social-media-icons {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-media-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-media-icons img {
+  width: 24px;
+  height: auto;
+}
+
+/* Footer Date */
+.footer-date {
+  text-align: center;
+  color: black;
+  padding: 10px 0;
+  font-size: 0.75em;
 }
